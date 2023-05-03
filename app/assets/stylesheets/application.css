@@ -13,4 +13,4 @@
  *= require_tree .
  *= require_self
  */
-@import "components/general";
+@import "./components/general";
