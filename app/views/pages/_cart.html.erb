@@ -1,0 +1,9 @@
+<% grouped_cart_items = current_user.cart.cart_items.group_by(&:product) %>
+<% grouped_cart_items.each do |product, items| %>
+  <%= product.name %> (<%= items.count %>)
+  <%= product.price * items.count %>
+  <%= link_to "Remove from cart", cart_item_path(items.first), method: :delete, data: { "turbo-method": "delete" } %>
+<% end %>
+
+<h1>Total Price:</h1>
+<%= current_user.cart.total_price %>
