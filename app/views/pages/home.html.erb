@@ -5,8 +5,9 @@
     <li>
       <% @products.each do |product| %>
         <ul>
-
+        <h3 class="font-medium text-xl">Producto:</h3>
           <%= product.name %>
+          <h3 class="font-medium text-xl">Descripcion:</h3>
           <%= product.description %>
           <button class="px-6 h-12 uppercase font-semibold tracking-wider border-2 border-black bg-teal-400 text-black" type="submit">
             <%= link_to "Add to cart", cart_items_path(product_id: product.id), data: { "turbo-method": "post" } %>

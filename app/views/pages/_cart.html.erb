@@ -2,7 +2,9 @@
 <% grouped_cart_items.each do |product, items| %>
   <%= product.name %> (<%= items.count %>)
   <%= product.price * items.count %>
-  <%= link_to "Remove from cart", cart_item_path(items.first), method: :delete, data: { "turbo-method": "delete" } %>
+  <button class="px-6 h-12 uppercase font-semibold tracking-wider border-2 border-black bg-teal-400 text-black" type="submit">
+    <%= link_to "Remove from cart", cart_item_path(items.first), method: :delete, data: { "turbo-method": "delete" } %>
+  </button>
 <% end %>
 
 <h1>Total Price:</h1>
