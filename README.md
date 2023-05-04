@@ -1,4 +1,4 @@
-# README
+# README  :tickets:
 
 This Bussines case is a first approach to an E-commerce page.
 The project was done using Ruby on Rails, it is an example of a basic catalogue that you can add itmes to a shopping cart and remove them.
