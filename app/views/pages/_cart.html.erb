@@ -1,4 +1,5 @@
 <% grouped_cart_items = current_user.cart.cart_items.group_by(&:product) %>
+<h3 class="font-bold text-xl" style="color: #000099;">Your shopping cart:</h3>
 <% grouped_cart_items.each do |product, items| %>
   <%= product.name %> (<%= items.count %>)
   <%= product.price * items.count %>
